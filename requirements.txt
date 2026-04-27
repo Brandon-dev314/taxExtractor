@@ -1,7 +1,6 @@
 streamlit
 openai
 python-dotenv
-unstructured
 python-docx
 openpyxl
-pi-heif
+pdfplumber
