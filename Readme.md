@@ -8,12 +8,6 @@ A web app that turns messy business documents into clean, structured JSON using 
 
 Upload a file and it returns the client name, amount, date, and request type as structured JSON, ready to drop into a database.
 
-## Why I built this
-
-I built this as a technical assessment for an AI developer role focused on accounting and tax automation. The challenge was straightforward on paper but interesting in practice: take unstructured text from different sources and turn it into strict JSON that a SQL database can ingest without manual cleanup.
-
-The hard part isn't calling the API. It's making sure the output is actually usable — consistent keys, normalized formats (dates as YYYY-MM-DD, amounts as plain numbers), and a recovery strategy when the model occasionally ignores the instructions.
-
 ## How it works
 
 1. The user uploads one or more files (txt, docx, xlsx, or pdf).
