@@ -152,9 +152,6 @@ def tiene_datos_utiles(datos: dict) -> bool:
     return any(v and v != "NO_ENCONTRADO" for v in datos.values())
 
 
-# ---------------------------------------------------------------------------
-# Pipeline de procesamiento
-# ---------------------------------------------------------------------------
 
 def procesar_archivo(archivo) -> dict:
     texto, error_lectura = leer_archivo(archivo)
@@ -198,9 +195,6 @@ def procesar_archivo(archivo) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
-# UI
-# ---------------------------------------------------------------------------
 
 st.title("Extractor Fiscal — Text-to-Structured-Data")
 st.markdown("---")
@@ -271,7 +265,7 @@ if archivos_subidos:
             st.subheader("Resultados")
 
             for r in resultados:
-                icono = "✅" if r["estado"] == "exitoso" else "❌"
+                icono =  if r["estado"] == "exitoso" else return False
                 with st.expander(f"{icono} {r['archivo']}", expanded=(r["estado"] == "exitoso")):
                     if r["estado"] == "exitoso":
                         st.json(r["datos"])
