@@ -265,7 +265,7 @@ if archivos_subidos:
             st.subheader("Resultados")
 
             for r in resultados:
-                icono =  if r["estado"] == "exitoso" else return False
+                icono =  "" if r["estado"] == "exitoso" else ""
                 with st.expander(f"{icono} {r['archivo']}", expanded=(r["estado"] == "exitoso")):
                     if r["estado"] == "exitoso":
                         st.json(r["datos"])
